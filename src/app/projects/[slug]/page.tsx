@@ -18,8 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${project.title} | Inteliqo Interiors & Turnkey Solutions`,
+    title: `${project.title} — Interior Design Project | Inteliqo`,
     description: project.description,
+    openGraph: {
+      title: `${project.title} | Inteliqo Interiors`,
+      description: project.description,
+      images: [{ url: project.thumbnail }],
+    },
   };
 }
 
