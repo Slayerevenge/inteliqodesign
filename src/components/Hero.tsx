@@ -134,7 +134,7 @@ export default function Hero() {
         >
           <div className="text-center">
             <p className="text-3xl sm:text-4xl font-bold text-white mb-1 font-heading">
-              40k+
+              40k+ Sq. Ft.
             </p>
             <p className="text-white/60 text-xs sm:text-sm tracking-wide uppercase">
               Largest Project
