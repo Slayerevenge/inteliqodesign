@@ -63,7 +63,16 @@ export const projects: Project[] = [
     description:
       "A comprehensive civil and interiors project for a 4,000 sq ft residence in Ullal. Built from the ground up, this home features thoughtful spatial flow, natural material finishes, and design details that bring together structural integrity and aesthetic refinement.",
     thumbnail: "/projects/residence-in-ullal-civil-interiors/1.jpg",
-    images: Array.from({ length: 7 }, (_, i) => `/projects/residence-in-ullal-civil-interiors/${i + 1}.jpg`),
+    images: [
+      "/projects/residence-in-ullal-civil-interiors/1.jpg",
+      "/projects/residence-in-ullal-civil-interiors/2.png",
+      "/projects/residence-in-ullal-civil-interiors/3.jpg",
+      "/projects/residence-in-ullal-civil-interiors/4.jpg",
+      "/projects/residence-in-ullal-civil-interiors/5.jpg",
+      "/projects/residence-in-ullal-civil-interiors/6.jpg",
+      "/projects/residence-in-ullal-civil-interiors/7.jpg",
+      "/projects/residence-in-ullal-civil-interiors/8.jpg",
+    ],
   },
   {
     id: "jp-nagar",
@@ -85,7 +94,11 @@ export const projects: Project[] = [
     description:
       "A curated collection of renovation projects across Bangalore and Mysore. From kitchen makeovers to complete home transformations, each project demonstrates our ability to breathe new life into existing spaces while respecting their original character and the client's vision.",
     thumbnail: "/projects/renovation-projects/1.jpg",
-    images: Array.from({ length: 24 }, (_, i) => `/projects/renovation-projects/${i + 1}.jpg`),
+    images: [
+      ...Array.from({ length: 20 }, (_, i) => `/projects/renovation-projects/${i + 1}.jpg`),
+      "/projects/renovation-projects/21.png",
+      ...Array.from({ length: 4 }, (_, i) => `/projects/renovation-projects/${i + 22}.jpg`),
+    ],
   },
   {
     id: "3d-architectural-renders",
