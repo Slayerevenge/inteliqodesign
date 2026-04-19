@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Clean, Fresh Palette */
+  --color-brand-primary: #F4A898;
+  --color-brand-primary-light: #FACEBD;
+  --color-brand-primary-dark: #E8937F;
+  --color-brand-dark: #1E1E1E;
+  --color-brand-dark-light: #2C2C2C;
+  --color-brand-gold: #D4A853;
+  --color-brand-gold-light: #E8C88A;
+  --color-brand-white: #ffffff;
+  --color-brand-off-white: #FAFAF9;
+  --color-brand-linen: #FFF5F2;
+  --color-brand-gray: #6B6B6B;
+  --color-brand-light-gray: #F5ECEB;
+
+  /* Font families */
+  --font-playfair: var(--font-playfair-display);
+  --font-inter: var(--font-inter);
+
+  /* Spacing & sizing */
+  --spacing-navbar: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--spacing-navbar);
+}
+
+/* Base body styles */
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  color: var(--color-brand-dark);
+  background-color: var(--color-brand-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AAA;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CCC #F5F5F5;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+}
+
+/* Heading font utility */
+.font-heading {
+  font-family: var(--font-playfair-display), Georgia, serif;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Photo marquee animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.marquee-track {
+  animation: marquee-scroll 40s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
 }
